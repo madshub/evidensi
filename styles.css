@@ -1,0 +1,309 @@
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ── */
+html, body {
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Teal accent ── */
+.teal {
+  color: #06678A;
+}
+
+/* ── Page wrapper ── */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* ── Page container — box shadow from Figma effect_KMK410 ── */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Thematic grouping — subtle white gradient bg from fill_LOV0KW ── */
+.thematic-grouping {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  padding: 15px 20px 35px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 23%);
+}
+
+/* ═══════════════════════════
+   HEADER  (layout_KGCG55)
+═══════════════════════════ */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Burger menu (layout_C7QNRJ: width 56px) */
+.burger-menu {
+  display: flex;
+  align-items: center;
+  width: 56px;
+  flex-shrink: 0;
+}
+
+.burger-menu img {
+  width: 22px;
+  height: 17px;
+  display: block;
+}
+
+/* Logo + slogan stack — slogo sits in the bottom padding of logo-frame */
+.logo-slogo {
+  position: relative;
+  width: 146px;
+  flex-shrink: 0;
+}
+
+/* Logo frame (layout_FQ2Y3Y: width 146px, padding-bottom 10px) */
+.logo-frame {
+  width: 146px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* "evidensi" — Tilt Warp 26px, fill_XVJ1YM top-fill = #000000 */
+.logo-text {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.262;
+  text-align: center;
+  color: #000000;
+}
+
+/* Slogan frame — anchored to the bottom of the logo-frame padding area */
+.slogo-frame {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* "EVIDENCE STRENGTH INSIGHTS" — Tinos 8px, fill_XVJ1YM top-fill = #000000 */
+.slogo-text {
+  font-family: 'Tinos', serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+/* SIGN UP button — ghost style, teal text (fill_9X2TGD = #06678A) */
+.btn-signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  border-radius: 3px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.btn-signup-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #06678A;
+  text-align: center;
+}
+
+.btn-signup-icon {
+  display: flex;
+  align-items: center;
+  padding: 4px 1px 4px 0;
+}
+
+/* ═══════════════════════════
+   HERO SECTION (layout_T35NVC)
+   — background image at 30% opacity via pseudo-element
+═══════════════════════════ */
+.hero-section {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(assets/hero-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading wrapper (layout_IY6VLV: row, center, fill, padding-top 35px) */
+.hero-heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+  padding: 35px 0 0;
+  width: 100%;
+}
+
+/* Fixed 340px text frame — layout_WNI7GF */
+.hero-heading-inner {
+  width: 340px;
+  max-width: 100%;
+}
+
+/* H1 — Tinos 34px, fill_XVJ1YM top-fill = #000000; teal spans per character fills */
+.hero-h1 {
+  font-family: 'Tinos', serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.235;
+  text-align: center;
+  color: #000000;
+}
+
+/* Subtitle (layout_IXOWB4: padding 10px 0 30px) */
+.hero-subtitle {
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  padding: 10px 0 30px;
+  width: 100%;
+}
+
+/* "*STARTING WITH NUTRITION RELATED HEALTH" — Tinos 15px */
+.hero-subtitle-text {
+  font-family: 'Tinos', serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+  color: #000000;
+  max-width: 600px;
+  width: 100%;
+  word-break: break-word;
+}
+
+/* Description (layout_3FF5L4: padding-bottom 40px) */
+.hero-description {
+  align-self: stretch;
+  padding: 0 0 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Body copy — Inter 16px, fill_LKTFTI = #1E2939 */
+.hero-desc-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: #1E2939;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* ═══════════════════════════
+   CTA BUTTON (layout_E08IDO)
+   — fill_9X2TGD = #06678A
+═══════════════════════════ */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-cta {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 20px;
+  background: #06678A;
+  border-radius: 3px;
+  text-decoration: none;
+  gap: 10px;
+}
+
+/* "GET EARLY ACCESS" — Inter SemiBold 14px, fill_6H5GCW = #FFFFFF */
+.btn-cta-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  line-height: 1.714;
+  text-align: center;
+}
+
+.btn-cta-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+/* ═══════════════════════════
+   RESPONSIVE
+═══════════════════════════ */
+
+/* 320px: heading font scales down so 3 lines still fit */
+@media (max-width: 359px) {
+  .hero-h1 {
+    font-size: 28px;
+  }
+}
+
+/* 600px+: increase thematic padding */
+@media (min-width: 600px) {
+  .thematic-grouping {
+    padding: 20px 40px 40px;
+  }
+}

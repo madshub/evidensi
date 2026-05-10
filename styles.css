@@ -111,14 +111,13 @@ html, body {
   justify-content: center;
 }
 
-/* "EVIDENCE STRENGTH INSIGHTS" — Tinos 8px, fill_XVJ1YM top-fill = #000000 */
+/* "EVIDENCE STRENGTH INSIGHTS" — Tinos 8px, style_G98P1R */
 .slogo-text {
   font-family: 'Tinos', serif;
   font-size: 8px;
   font-weight: 400;
   line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.04em;
   color: #000000;
 }
 
@@ -137,6 +136,7 @@ html, body {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 600;
+  line-height: 1.21;
   letter-spacing: 0.8px;
   color: #06678A;
   text-align: center;

@@ -127,7 +127,7 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
   border-radius: 3px;
   text-decoration: none;
   flex-shrink: 0;
@@ -179,13 +179,13 @@ html, body {
   z-index: 1;
 }
 
-/* Heading wrapper (layout_IY6VLV: row, center, fill, padding-top 35px) */
+/* Heading wrapper (layout_INKNYA: row, center, fill, padding 35px 0 0; +10px bottom = gap from layout_X524SN) */
 .hero-heading-wrapper {
   display: flex;
   justify-content: center;
   align-self: stretch;
   flex-wrap: wrap;
-  padding: 35px 0 0;
+  padding: 35px 0 10px;
   width: 100%;
 }
 
@@ -205,7 +205,7 @@ html, body {
   color: #000000;
 }
 
-/* Subtitle (layout_IXOWB4: padding 10px 0 30px) */
+/* Subtitle (layout_PS173S: padding 10px 0 30px) */
 .hero-subtitle {
   display: flex;
   justify-content: center;
@@ -222,15 +222,14 @@ html, body {
   line-height: 1.15;
   text-align: center;
   color: #000000;
-  max-width: 600px;
   width: 100%;
-  word-break: break-word;
+  max-width: 560px;
 }
 
-/* Description (layout_3FF5L4: padding-bottom 40px) */
+/* Description (layout_ATR3FV: padding 0 0 40px; +10px top = gap from layout_X524SN) */
 .hero-description {
   align-self: stretch;
-  padding: 0 0 40px;
+  padding: 10px 0 40px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -244,8 +243,8 @@ html, body {
   line-height: 1.5;
   text-align: center;
   color: #1E2939;
-  max-width: 600px;
   width: 100%;
+  max-width: 560px;
 }
 
 /* ═══════════════════════════
@@ -400,11 +399,11 @@ html, body {
   text-align: center;
 }
 
-/* Body paragraph — left-aligned, max-width matches Figma column width */
+/* Body paragraph — left-aligned, max width = 600px content area (600−40px padding) */
 .module-body {
   align-self: flex-start;
   width: 100%;
-  max-width: 540px;
+  max-width: 560px;
   padding: 0 10px;
 }
 
@@ -417,10 +416,10 @@ html, body {
   text-align: left;
 }
 
-/* CTA copy — Tinos, centered; first line bold, second regular */
+/* CTA copy — Tinos, centered; max width = 600px content area */
 .module-cta-copy-wrap {
   width: 100%;
-  max-width: 540px;
+  max-width: 560px;
 }
 
 .module-cta-copy {
@@ -469,16 +468,13 @@ html, body {
    RESPONSIVE
 ═══════════════════════════ */
 
-/* 320px: heading font scales down so 3 lines still fit */
+/* 320px: heading scales down to fit 3 lines; button gap tightened to prevent header wrap */
 @media (max-width: 359px) {
   .hero-h1 {
     font-size: 28px;
   }
-}
-
-/* 600px+: increase thematic padding */
-@media (min-width: 600px) {
-  .thematic-grouping {
-    padding: 20px 40px 40px;
+  .btn-signup {
+    gap: 5px;
   }
 }
+

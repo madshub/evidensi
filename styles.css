@@ -179,13 +179,13 @@ html, body {
   z-index: 1;
 }
 
-/* Heading wrapper (layout_INKNYA: row, center, fill, padding 35px 0 0; +10px bottom = gap from layout_X524SN) */
+/* Heading wrapper — layout_RIM8B6: row, center, fill, padding 35px 0 0 */
 .hero-heading-wrapper {
   display: flex;
   justify-content: center;
   align-self: stretch;
   flex-wrap: wrap;
-  padding: 35px 0 10px;
+  padding: 35px 0 0;
   width: 100%;
 }
 
@@ -226,10 +226,10 @@ html, body {
   max-width: 560px;
 }
 
-/* Description (layout_ATR3FV: padding 0 0 40px; +10px top = gap from layout_X524SN) */
+/* Description — layout_AUNZW7: padding 0 0 40px */
 .hero-description {
   align-self: stretch;
-  padding: 10px 0 40px;
+  padding: 0 0 40px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -286,7 +286,7 @@ html, body {
 .btn-cta-icon {
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  padding: 0 1px 0 10px;
 }
 
 /* ═══════════════════════════
@@ -307,19 +307,14 @@ html, body {
   padding: 40px 30px;
 }
 
-/* style_8RKAB2: Tinos 400 16px 1.625em centered; fill_6B45OU = #1E2939 */
+/* pixel-confirmed: Inter (not Tinos); Bold for "Methodology expert?", Regular for link */
 .method-expert-text {
-  font-family: 'Tinos', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.625;
+  line-height: 1.875;
   color: #1E2939;
   text-align: center;
-}
-
-.method-expert-text strong {
-  font-weight: 700;
-  font-style: normal;
 }
 
 .method-expert-link {
@@ -421,18 +416,24 @@ html, body {
   max-width: 560px;
 }
 
+/* CTA copy: Inter 700 line1 + Inter 400 line2 — characterStyleOverrides confirmed by pixel inspection */
 .module-cta-copy {
-  font-family: 'Tinos', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.15;
+  font-weight: 700;
   color: #ffffff;
   text-align: center;
 }
 
-.module-cta-copy strong {
-  font-weight: 700;
-  font-style: normal;
+.module-cta-q {
+  display: block;
+  line-height: 1.625;
+}
+
+.module-cta-sub {
+  display: block;
+  font-weight: 400;
+  line-height: 1.875;
 }
 
 /* Apply button — white with dark-teal text */
@@ -461,6 +462,615 @@ html, body {
   display: flex;
   align-items: center;
   padding: 4px 1px 4px 12px;
+}
+
+/* ═══════════════════════════
+   BUILT FOR BOTH MODULE
+   layout_J0SZH7 / fill_A71ESJ
+═══════════════════════════ */
+.module-builtforboth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 22px;
+  padding: 40px 20px 45px;
+  background: #F3F3F0;
+}
+
+/* Header + heading group — layout_WYYX53 */
+.bfb-header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 15px;
+}
+
+/* "BUILT FOR BOTH" — ABeeZee 12px, 7px letter-spacing, 2.5lh; layout_OWESJJ fixed 335px */
+.bfb-label-text {
+  display: block;
+  width: 100%;
+  max-width: 335px;
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.5;
+  letter-spacing: 7px;
+  color: #000000;
+  text-align: center;
+}
+
+/* H2 — Tinos 32px 1.25lh; style_VC0DZQ */
+.bfb-h2 {
+  align-self: stretch;
+  font-family: 'Tinos', serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  text-align: center;
+}
+
+/* Cards column — layout_MK4DGE: column, gap 20px, padding 0 28px */
+.bfb-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 20px;
+  padding: 0 28px;
+}
+
+/* Card outer — white, 20px radius; max-width pixel-confirmed at 600px from 1024px+ renders */
+.bfb-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+/* Card body — background image + padding; layout_M0CIJ2: padding 25px 20px 40px */
+.bfb-card-body {
+  width: 100%;
+  padding: 25px 20px 40px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bfb-card--public .bfb-card-body {
+  background-image: url(assets/bfb-public-bg.png);
+}
+
+.bfb-card--professionals .bfb-card-body {
+  background-image: url(assets/bfb-professionals-bg.png);
+}
+
+/* Card content column — layout_I0JXHN: column, gap 25px */
+.bfb-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Title wrapper — layout_XEBJMJ: padding 20px 0 0 */
+.bfb-card-title-wrap {
+  align-self: stretch;
+  padding: 20px 0 0;
+}
+
+/* Card title — Tinos 400 26px ~1.15lh centered; style_5LCLVL */
+.bfb-card-title {
+  font-family: 'Tinos', serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #000000;
+  text-align: center;
+}
+
+/* Quote — Tinos 400 italic 18px 1.333lh; style_6T129P — italic pixel-confirmed from render */
+.bfb-card-quote {
+  font-family: 'Tinos', serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.333;
+  color: #6B6B6B;
+  text-align: left;
+}
+
+/* Bullet list — Inter 400 16px 1.625lh; style_2TQ378 */
+.bfb-card-bullets {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.bfb-card-bullets li {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #000000;
+  text-align: left;
+}
+
+/* CTA wrapper — layout_01GRE0: column, center, padding 15px 0 0 */
+.bfb-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  padding: 15px 0 0;
+}
+
+/* GET EARLY ACCESS button — white bg, teal text; layout_TL8UIM */
+.btn-bfb {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 20px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+/* style_4RQ8BK: Inter 600 14px 1.714lh 0.8px letter-spacing #055E74 */
+.btn-bfb-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.714;
+  letter-spacing: 0.8px;
+  color: #055E74;
+  text-align: center;
+}
+
+/* layout_PCOJUB: padding 0 1px 0 10px */
+.btn-bfb-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 1px 0 10px;
+}
+
+/* ═══════════════════════════
+   HOW IT WORKS MODULE
+   layout_B41I9P / fill_96AQKA
+═══════════════════════════ */
+.module-howitworks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 22px;
+  padding: 40px 20px 45px;
+  background: linear-gradient(136deg, rgba(4, 153, 177, 1) 11%, rgba(104, 199, 199, 1) 100%);
+}
+
+/* Header group — layout_KPTVAV: column, center, gap 15px */
+.hiw-header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 15px;
+}
+
+/* Label container — layout_O6FLC9: fixed 335px */
+.hiw-label-frame {
+  width: 335px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* "HOW IT WORKS" — ABeeZee 12px 2.5lh 7px letter-spacing; style_EN2Q52 */
+.hiw-label-text {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.5;
+  letter-spacing: 7px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* H2 — Tinos 32px 1.25lh white; style_F2716L */
+.hiw-h2 {
+  align-self: stretch;
+  font-family: 'Tinos', serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Description wrapper — fill + padding 10px; max-width matches cards so it centers at wide viewports */
+.hiw-desc-wrap {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+}
+
+/* Description — Inter 16px 1.625lh left white; style_RBLLWI */
+.hiw-desc-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* Card wrapper — layout_BJAC0J / layout_LSKVS8: column, center, padding 0 28px */
+.hiw-card-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  padding: 0 28px;
+}
+
+/* Card — white 20px radius; max-width pixel-confirmed at 600px from 1024px render (x=212..811) */
+.hiw-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+/* Card body — layout_Y7ZP7X: fill, padding 25px 20px 30px */
+.hiw-card-body {
+  width: 100%;
+  padding: 25px 20px 30px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hiw-card--does .hiw-card-body {
+  background-image: url(assets/hiw-does-bg.png);
+}
+
+.hiw-card--doesnot .hiw-card-body {
+  background-image: url(assets/hiw-doesnot-bg.png);
+}
+
+/* Card content — layout_H0095U: column, center, gap 15px */
+.hiw-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Title wrapper — layout_PZNDZC: fill, padding 20px 0 0 */
+.hiw-card-title-wrap {
+  align-self: stretch;
+  padding: 20px 0 0;
+}
+
+/* Card title — Tinos 400 26px 1.15lh center #055E74; style_8076VB */
+/* pixel-confirmed: "does" / "does NOT do" are bold (characterStyleOverride) */
+.hiw-card-title {
+  font-family: 'Tinos', serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #055E74;
+  text-align: center;
+}
+
+.hiw-card-title strong {
+  font-weight: 700;
+}
+
+/* Bullets — Inter 400 16px 1.625lh left black; style_RBLLWI */
+.hiw-card-bullets {
+  align-self: stretch;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.hiw-card-bullets li {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #000000;
+  text-align: left;
+}
+
+/* Bottom link — layout_1H5RFH: row, justify-center, align-center, padding 10px 0 */
+.hiw-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Bottom text — Inter 400 16px 1.625lh center white; fixed 335px; style_4JMRRB */
+/* pixel-confirmed both lines are Inter (no serifs at 4× zoom) */
+.hiw-bottom-text {
+  width: 335px;
+  max-width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.hiw-bottom-text strong {
+  font-weight: 700;
+}
+
+.hiw-bottom-link {
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* ═══════════════════════════
+   GOVERNANCE MODULE
+   layout_5N7WZ4 / fill_10F3AZ
+═══════════════════════════ */
+
+/* Module — column, center, stretch, gap 29px, padding 30px 20px 45px, white */
+.module-governance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 29px;
+  padding: 30px 20px 45px;
+  background: #FFFFFF;
+}
+
+/* Header group — layout_XC7HV9: column, center, stretch, gap 15px */
+.gov-header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 15px;
+}
+
+/* Label frame — layout_QMMCIK: fixed 335px, column center */
+.gov-label-frame {
+  width: 335px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* "GOVERNANCE" — ABeeZee 12px 2.5lh 7px letter-spacing center black; style_BBQZCF */
+.gov-label-text {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.5;
+  letter-spacing: 7px;
+  color: #000000;
+  text-align: center;
+}
+
+/* H2 — Tinos 32px 1.25lh center black; style_N3WR7M */
+.gov-h2 {
+  align-self: stretch;
+  font-family: 'Tinos', serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  text-align: center;
+}
+
+/* Text body — layout_MR3DMC: column, stretch, gap 29px; max-width centers at wide viewports */
+.gov-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  gap: 29px;
+}
+
+/* Para/list wrappers — layout_1YICFY: fill, padding 0 10px */
+.gov-para-wrap,
+.gov-list-wrap {
+  align-self: stretch;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Body text — Inter 400 16px 1.625lh left black; style_T93Q6Y */
+.gov-para-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #000000;
+  text-align: left;
+}
+
+/* List */
+.gov-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.gov-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #000000;
+  text-align: left;
+}
+
+/* CTA wrapper — layout_PESPFU → WIZKII: full-width, centered, 20px top padding */
+.gov-cta-wrap {
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* CTA text — Inter 16px center teal; bold line1 (1.625lh), regular line2 (1.875lh); style_LBB0DY */
+/* characterStyleOverride: pixel-confirmed Inter not Tinos */
+.gov-cta-text {
+  width: 335px;
+  max-width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #056B8B;
+  text-align: center;
+}
+
+.gov-cta-q {
+  display: block;
+  font-weight: 700;
+  line-height: 1.625;
+}
+
+.gov-cta-sub {
+  display: block;
+  font-weight: 400;
+  line-height: 1.875;
+}
+
+/* Button — teal bg, white text + arrow, border-radius 3px; layout_A8C9VL / style_KX9LRG */
+.btn-gov {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 20px;
+  background: #06678A;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.btn-gov-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.714;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.btn-gov-icon {
+  display: flex;
+  align-items: center;
+  padding: 4px 1px 4px 12px;
+}
+
+/* ═══════════════════════════
+   FOOTER
+   layout_PZ87OA / fill_V2KZ83
+═══════════════════════════ */
+
+/* Footer — column, stretch, gap 10px, padding 45px 30px; dark gradient bg */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  width: 100%;
+  gap: 10px;
+  padding: 45px 30px;
+  background: linear-gradient(152deg, rgba(102, 102, 102, 0) 0%, rgba(29, 29, 29, 1) 100%), #323232;
+}
+
+/* Footer content — layout_E6OW8B: column, center, stretch, gap 25px */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  gap: 25px;
+}
+
+/* Note wrapper — layout_Z5ISLX: fill, stretch */
+.footer-note-wrap {
+  align-self: stretch;
+  width: 100%;
+}
+
+/* Note text — Inter 400 14px 1.21lh center white; style_OISQY6 */
+.footer-note-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Links row — layout_OKNSPR: row, center, center, gap 10px, padding 10px 0 */
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+/* Link — Inter 400 16px 1.5lh white underlined; style_55UUXD */
+/* characterStyleOverride: pixel-confirmed Inter not Tinos */
+.footer-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* Separator pipe — same font, no underline */
+.footer-sep {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Copyright row — layout_XKN9PY: row, center */
+.footer-copy {
+  display: flex;
+  justify-content: center;
+}
+
+/* Copyright text — Inter 400 14px 1.21lh white; style_RHLZ82 */
+.footer-copy-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #FFFFFF;
 }
 
 /* ═══════════════════════════

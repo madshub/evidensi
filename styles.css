@@ -399,9 +399,8 @@ html, body {
   text-align: center;
 }
 
-/* Body paragraph — left-aligned, max width = 600px content area (600−40px padding) */
+/* Body paragraph — centered block, left-aligned text, max-width matches 600px content area */
 .module-body {
-  align-self: flex-start;
   width: 100%;
   max-width: 560px;
   padding: 0 10px;

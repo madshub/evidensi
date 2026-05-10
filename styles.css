@@ -349,8 +349,8 @@ html, body {
 
 /* Heading */
 .module-heading {
-  align-self: stretch;
   width: 100%;
+  max-width: 440px;
 }
 
 .module-h2 {
@@ -362,10 +362,10 @@ html, body {
   text-align: center;
 }
 
-/* Body paragraph — left-aligned */
+/* Body paragraph — left-aligned, capped width */
 .module-body {
-  align-self: stretch;
   width: 100%;
+  max-width: 600px;
   padding: 0 10px;
 }
 
@@ -380,8 +380,8 @@ html, body {
 
 /* CTA copy — Tinos Bold, centered */
 .module-cta-copy-wrap {
-  align-self: stretch;
   width: 100%;
+  max-width: 440px;
 }
 
 .module-cta-copy {

@@ -79,7 +79,7 @@ All fonts loaded via Google Fonts (`ABeeZee`, `Tilt Warp`, `Tinos`, `Inter`).
 
 All spacing directly from Figma layout tokens. Key values:
 
-- **Page container max-width: `1440px`** — pixel-confirmed from 3000px Figma artboard (Framework module renders at 360px at 0.25× = 1440px actual; MCP YAML reports `horizontal: fill` but does not expose the max-width constraint)
+- **Page container max-width: `1920px`** — caps the container on ultra-wide viewports
 - Module padding (most sections): `30–40px top, 45px bottom, 20px sides`
 - Inter-element gap within modules: `22–29px`
 - Card inner padding: `25px 20px 30–40px`
@@ -236,4 +236,4 @@ These are irresolvable font rendering differences between Figma's renderer and C
 | v6 | HIW fixes: desc-wrap wide-viewport centering (align-self:stretch removed, max-width:600px added); bottom text font Tinos→Inter; "Want updates" bold confirmed |
 | v7 | Governance module + Footer added; CTA copy display:block span pattern; all arrow SVGs; dark footer gradient |
 | v7.1 | Font fixes post pixel-inspection: Governance CTA Tinos→Inter + line-height restructure (1.625/1.875); footer links/separator Tinos→Inter |
-| v7.2 | Add `max-width: 1440px` to `.page-container` — pixel-confirmed from Figma 3000px artboard (Framework module 360px at 0.25× = 1440px); MCP YAML does not expose this constraint |
+| v7.2 | Add `max-width: 1920px` to `.page-container` — caps layout on ultra-wide viewports |

@@ -27,12 +27,13 @@ html, body {
   min-height: 100vh;
 }
 
-/* ── Page container — box shadow from Figma effect_KMK410 ── */
+/* ── Page container — box shadow from Figma effect_KMK410; max-width 1440px pixel-confirmed from 3000px artboard ── */
 .page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 1440px;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
 }
 
